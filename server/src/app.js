@@ -8,9 +8,9 @@ app.use(morgan('combined'))
 app.use(bodyParser.json())
 app.use(cors())
 
-app.get('/status', (req, resp) => {
+app.post('/register', (req, resp) => {
   resp.send({
-    message: 'hellow world!'
+    message: `Hello ${req.body.email}! Your user was registered. Have fun!`
   })
 })
 
